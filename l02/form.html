@@ -9,17 +9,67 @@
 <body>
 
 
-	<form action="test.html" method="post" >
+	<form action="test.html" method="get" enctype="multipart/form-data">
+		<div>
+			Content: 
+			<textarea name="content" cols="30" rows="10"></textarea>
+		</div>
+		<div>
+			Hometown:
+			<select name="hometown" multiple>
+				<optgroup label="Mien bac"> 
+					<option value="hn">ha noi</option>
+					<option selected value="nd">Nam dinh</option>
+					<option value="hna">Ha nam</option>
+				</optgroup>
+				<optgroup label="Bac Trung bo"> 
+					<option value="na">Nghe An</option>
+					<option  value="th">Thanh Hoa</option>
+					<option value="ht">Ha Tinh</option>
+				</optgroup>
+			</select>
+		</div>
+		<div>
+			Price:
+			<input type="range" name="price" value="" min="0" max="1000">
+		</div>
+		<div>
+			<span>Gender: </span>
+			<label for="ipGenderMale">Male</label>
+		 	<input type="radio" id="ipGenderMale" name="gender" value="1" >
+			<label for="ipGenderFemale">Female</label>
+		 	<input type="radio" id="ipGenderFemale" name="gender" value="2" >
+			<label for="ipGenderOther">Other</label>
+		 	<input type="radio" checked id="ipGenderOther" name="gender" value="3" >
+		</div>
+		<div>
+			<label for="ipMarried">Married 2</label>
+		 	<input type="checkbox" checked id="ipMarried" name="married[]" value="2" >
+		</div>
+		<div>
+			<label for="ipHidden">avatar</label>
+		 	<input type="file" id="ipHidden" name="avatar" accept="image/*" value="" placeholder="">
+		</div>
+		<div>
+			<label for="ipHidden">Input Hidden</label>
+		 	<input type="hidden" id="ipHidden" name="hidden" value="123" placeholder="">
+		</div>
 		<div>
 			<label for="ipEmail">Input Email</label>
-		 	<input type="email" id="ipEmail" name="email" value="" placeholder="">
+		 	<input type="email" id="ipEmail" name="email" value="" placeholder="dien email cua ong vao day">
 		</div>
 		<div>
 			<label for="ipText">Input Text</label>
 		 	<input type="text" id="ipText" name="text" value="" placeholder="">
 		</div>
 		<div>
+			<label for="ipTel">Input Tel</label>
+		 	<input type="tel" id="ipTel" name="text" value="" placeholder="">
+		</div>
+
+		<div>
 			<button type="submit">Gui data</button>
+			<button type="reset">Cancel</button>
 		</div>
 	</form>
 	
