@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+		.right{
+			width: 200px;
+			height: 200px;
+			background: green;
+			float: right;
+		}
+		p, div{
+			
+		}
+		.left{
+			width: 600px;
+			height: 200px;
+			background: orange;
+			float: left;
+		}
+		.something{
+			width: 800px;
+			background: black;
+			height: 600px;
+			color: white;
+		}
+		.clearfix:after, .clearfix:before{
+			clear: both;
+			content: " ";
+			display: table;
+		}
+	</style>
+
+</head>
+<body>
+	<section class="clearfix">
+		<div class="left">
+		
+		</div>
+	
+		<div class="right">
+		
+		</div>
+	</section>
+	<div class="something">
+		
+	</div>
+	
+	
+</body>
+</html>
