@@ -23,9 +23,19 @@
 			height: 45px;
 			line-height: 45px;
 			border-right: 1px dashed #fff;
+			position: relative;
 		}
 		li:hover{
 			background: lightblue;
+		}
+		ul>li>ul{
+			display: none;
+			position: absolute;
+			top: 45px;
+			left: -40px;
+		}
+		ul>li:hover>ul{
+			display: block;
 		}
 	</style>
 
@@ -34,6 +44,20 @@
 	<ul>
 		<li>
 			<a href="#" title="">Trang chu</a>
+			<ul>
+				<li>
+					<a href="#" title="">Cap 2</a>
+				</li>
+				<li>
+					<a href="#" title="">Cap 2</a>
+				</li>
+				<li>
+					<a href="#" title="">Cap 2</a>
+				</li>
+				<li>
+					<a href="#" title="">Cap 2</a>
+				</li>
+			</ul>
 		</li>
 		<li>
 			<a href="#" title="">Trang chu</a>
