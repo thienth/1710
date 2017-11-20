@@ -1,22 +1,69 @@
+/*
+	begin Common tag
+ */
 *{
 	margin: 0;
 	padding: 0;
-}
-.top-menu{
-	min-height: 30px;
-	background: #000;
-}
-.middle-head{
-	background: #EE9B26;
-	min-height: 100px;
 }
 header>nav{
 	background: #9D0F19;
 	min-height: 45px;
 }
+main{
+	min-height: 1500px;
+	background: #FCFBFC;
+}
+footer{
+	min-height: 400px;
+	background: lightblue;
+}
+/*
+	end Common tag
+ */
+/*
+	begin common class
+ */
 .container{
 	width: 960px;
 	min-height: 30px;
 	background: #ccc;
 	margin: auto;
 }
+.clearfix:before, .clearfix:after{
+	clear: both;
+	content: " ";
+	display: table;
+}
+/*
+	end common class
+ */
+/*
+	begin header
+ */
+.top-menu{
+	min-height: 30px;
+	background: #000;
+}
+.middle-head{
+	background: #EE9B26;
+}
+.logo{
+	width: 200px;
+	float: left;
+	min-height: 100px;
+	border: 1px solid #000;
+}
+
+.top-ads{
+	min-height: 120px;
+	background: #dedede;
+}
+/*
+	end header
+ */
+
+
+
+
+
+
