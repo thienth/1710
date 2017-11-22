@@ -4,6 +4,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: arial, san-serif;
 }
 header>nav{
 	background: #9D0F19;
@@ -161,7 +162,41 @@ footer{
 	width: 60px;
 	float: right;
 	min-height: 100px;
-	border: 1px solid #000;
+	line-height: 100px;
+	color: #fff;
+}
+#main-menu>ul>li>a{
+	text-decoration: none;
+	color: #fff;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 5px;
+	display: block;
+}
+#main-menu{
+	position: relative;
+}
+#main-menu>ul{
+	list-style: none;
+	list-style-type: none;
+}
+#main-menu>ul>li{
+	float: left;
+}
+#main-menu>ul>li:hover{
+	background: #980D17;
+}
+#main-menu>ul>li:hover>.mega-menu{
+	display: block;
+}
+.mega-menu{
+	position: absolute;
+	min-height: 500px;
+	top: 45px;
+	left: 0;
+	right: 0;
+	background: #fff;
+	display: none;
 }
 .top-ads{
 	min-height: 120px;
@@ -215,7 +250,6 @@ footer{
 	padding: 20px 0;
 	border-bottom: 1px solid #000;
 }
-
 
 .advertising{
 	width: 285px;
