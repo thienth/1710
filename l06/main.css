@@ -105,6 +105,19 @@ footer{
 	padding-bottom: 20px;
 	border-bottom: 2px solid #FF5E34;
 }
+.new-img{
+	min-height: 200px;
+	background: grey
+}
+.new-content{
+	min-height: 200px;
+	background: green;
+}
+.new-unit{
+	padding: 20px 0;
+	border-bottom: 1px solid #000;
+}
+
 
 .advertising{
 	width: 285px;
