@@ -26,7 +26,6 @@ footer{
 .container{
 	width: 960px;
 	min-height: 30px;
-	/*background: #ccc;*/
 	margin: auto;
 }
 .clearfix:before, .clearfix:after{
@@ -102,7 +101,7 @@ footer{
 	height: 30px;
 	line-height: 30px;
 }
-.top-menu ul li:before{
+.top-menu ul li>a:before{
 	content: url('ngoi-sao.png');
 	margin-right: 2px;
 }
@@ -117,16 +116,19 @@ footer{
 	background: #EE9B26;
 }
 .logo{
-	width: 200px;
+	background: url('logo.png');
+	background-size: cover;
+	width: 110px;
 	float: left;
 	min-height: 100px;
-	border: 1px solid #000;
 }
 .hot-tags{
 	width: 690px;
 	float: left;
-	min-height: 100px;
-	border: 1px solid #000;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
 }
 .search-btn{
 	width: 60px;
