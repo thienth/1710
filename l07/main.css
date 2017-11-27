@@ -257,7 +257,15 @@ a{
 	padding: 20px 0;
 	border-bottom: 1px solid #000;
 }
-
+.spec-title{
+    background: url(border-spec.png) repeat-x;
+    background-position: 0 19px;
+    border-left: 5px solid orange;
+}
+.spec-title>span{
+	background: #fff;
+    padding: 0 10px;
+}
 .advertising{
 	width: 285px;
 	border: 1px solid #000;
