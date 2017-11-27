@@ -233,29 +233,18 @@ a{
 	border: 1px solid #000;
 }
 
-.major-new{
-	min-height: 300px;
-	background: lightblue;
-}
 .major-new>.new-body{
 	padding: 0 5px;
 }
 
-.minor-new{
-	min-height: 300px;
-	background: lightgreen;
-}
 .minor-new>.new-body{
 	padding: 0 7px;
 }
 .hot-news{
-	margin-bottom: 20px;
+	margin: 20px 0;
 }
-.trending-unit:first-child, .trending-unit:last-child{
-	background: aqua;
-}
-.trending-unit{
-	min-height: 200px;
+.trending-content{
+	padding: 0 10px;
 }
 .trending-slide{
 	padding-bottom: 20px;
