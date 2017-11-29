@@ -232,7 +232,6 @@ a{
 .content{
 	height: 1500px;
 	width: 672px;
-	border: 1px solid #000;
 }
 
 .major-new>.new-body{
@@ -290,7 +289,6 @@ a{
 }
 .advertising{
 	width: 285px;
-	border: 1px solid #000;
 }
 /*
 	end main
