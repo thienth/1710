@@ -49,9 +49,7 @@ a{
 .pad-0-5{
 	padding: 0 5px;
 }
-.pdr-15{
-	padding-right: 15px;
-}
+
 .col-1{
 	width: 8.3333%;
 	float: left;
@@ -267,26 +265,6 @@ a{
 .spec-title>span{
 	background: #fff;
     padding: 0 10px;
-}
-.spec-content-right{
-	border-right: 1px solid #ddd;
-	padding-right: 15px;
-	margin-top: 15px;
-}
-.spec-content-left{
-	padding-left: 15px;
-	margin-top: 15px;
-}
-.hot-spec{
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 20px;
-	margin-bottom: 15px;
-}
-.spec-unit{
-	margin-bottom: 15px;
-}
-.spec-unit h4{
-	padding-left: 10px;
 }
 .advertising{
 	width: 285px;
