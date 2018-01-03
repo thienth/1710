@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+
+	
+	<script>
+		// cho 1 chuoi bat ky nhap tu prompt
+		// tinh so luong ky tu nguyen am trong chuoi
+		var a = prompt("Nhập chuỗi:");
+		console.log(a);
+		var count = 0;
+		for(var i = a.length-1; i >= 0; i--){
+			if(a[i] == 'e' 
+				|| a[i] == 'u' 
+				|| a[i] == 'a' 
+				|| a[i] == 'o' 
+				|| a[i] == 'i'){
+				count++;
+			}
+		}
+		
+		console.log(`Có ${count} ký tự nguyên âm`);
+
+	</script>
+</body>
+</html>

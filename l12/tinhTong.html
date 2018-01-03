@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<input type="number" id="content" >
+	<button id="invoke">Tinh Tong</button>
+	<h2></h2>
+
+	<script type="text/javascript">
+		var content = document.querySelector('#content');
+		var h2 = document.querySelector('h2');
+		document.querySelector('#invoke').addEventListener('click', function(){
+			var total = 0;
+			var value = parseInt(content.value);
+			for (var i = value; i > 0; i--) {
+				total+=parseInt(i);
+			}
+			h2.innerText = total;
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body onload="loadingDone()" onresize="resizeFnc()">
+	<!-- <div id="loadingDiv" style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: #fff; text-align: center;">
+		<img src="loading.gif" alt="">
+	</div> -->
+
+	<img src="loading.giff" width="300" onerror="errImg(this)">
+
+	<textarea onselect="console.log('selected')">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+	<p onselect="console.log('selected')">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<select onchange="console.log(this.value)">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+	</select>
+	
+	<input type="text" id="target" value="" placeholder="">
+
+
+	<button type="button" onclick="checkNguyenAm()">Click me!</button>
+
+	<script>
+		function errImg(element){
+			element.src = 'default-img.jpg';
+		}
+		function loadingDone(){
+			setTimeout(function(){
+				// document.getElementById('loadingDiv').style.display = 'none';
+				document.getElementById('target').value = 'thienth';
+			}, 2000)
+		}
+
+		function resizeFnc(){
+			console.log('resized!');
+		}
+
+
+		// function summary(soA, soB){
+  //           console.log(soA+soB);
+		// }
+
+		// summary(5,9);
+		// setTimeout(function(){
+		// 	document.write('hello world!');
+		// }, 2000);
+	</script>
+</body>
+</html>

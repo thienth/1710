@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+
+
+
+	<div id="target" style="width: 400px; height: 400px; background: green;" >
+		
+	</div>
+
+	<script type="text/javascript">
+		var i = 1;
+		var colors = ['green', 'red', 'purple', 'yellow', 'blue'];
+		var div = document.getElementById('target');
+
+		div.addEventListener('mouseover', changeColor);
+		function changeColor(){
+			if(i == colors.length) i = 0;
+			div.style.background = colors[i];
+			i++;
+		}
+
+		function checkMouse(event){
+			if(event.which == 1){
+				console.log('chuot trai');
+			}else if(event.which == 2){
+				console.log('chuot giua');
+			}else if(event.which == 3){
+				console.log('chuot phai');
+			}else{
+				console.log('chuot chu');
+			}
+		}
+		function keypressEvent(e){
+			document.getElementById('target').innerText = e.value;
+		}
+
+
+	</script>
+</body>
+</html>
