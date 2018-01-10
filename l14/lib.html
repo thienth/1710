@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		.red{
+			background: red!important;
+		}
+	</style>
+</head>
+<body>
+
+	<div style="width: 400px; height: 400px; background: green; position: fixed;">
+		<div>
+			<button product-id='100'>click me</button>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+		});
+		// $('div').click(function(){
+		// 	$(this).toggleClass('red');
+		// })
+		
+		var left = 0;
+		$('button').click(function(){
+			console.log($(this).attr('product-id'));
+			$(this).attr('product-id', 200);
+			left+=20;
+			console.log($(this).parent().parent().append('<h2>thienth</h2>'));
+		});
+
+	</script>
+</body>
+</html>

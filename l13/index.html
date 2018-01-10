@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					<input type="checkbox" id="parent" value="">
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Age
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<input type="checkbox" class="child" value="">
+				</td>
+				<td>Nguyen Van A</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="child" value="">
+				</td>
+				<td>Nguyen Van A</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="child" value="">
+				</td>
+				<td>Nguyen Van A</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="child" value="">
+				</td>
+				<td>Nguyen Van A</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="child" value="">
+				</td>
+				<td>Nguyen Van A</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" class="child" value="">
+				</td>
+				<td>Nguyen Van A</td>
+				<td>30</td>
+			</tr>
+		</tbody>
+	</table>
+	
+
+	<script>
+		var parent = document.querySelector('#parent');
+		var childs = document.querySelectorAll('.child');
+
+		parent.addEventListener('click', function(){
+			for (var i = 0; i < childs.length; i++) {
+				childs[i].checked = this.checked;
+			}
+		});
+
+		for (var i = childs.length - 1; i >= 0; i--) {
+			childs[i].addEventListener('click', function(){
+				var checkedNumber = document.querySelectorAll('.child:checked').length;
+				parent.checked = checkedNumber == childs.length;
+			});
+		}
+	</script>
+</body>
+</html>

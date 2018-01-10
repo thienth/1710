@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		td{
+			width: 40px;
+			height: 40px;
+			border: 1px solid #000;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<select id="groundSize"></select>
+	<table id="playground">
+		
+	</table>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		var groundSize = 5;
+		var turn = 'X';
+		$(document).ready(function(){
+			for (var i = 5; i <= 20; i++) {
+				$('#groundSize').append(
+					`<option value="${i}">${i}</option>`
+				);
+
+			}
+
+			$('#groundSize').on('change', function(){
+				groundSize = $(this).val();
+				startGame();
+			});
+
+			startGame();
+		});
+
+
+		function startGame(){
+			var tr = ``;
+			for (var i = 0; i < groundSize; i++) {
+				tr += `<tr>`;
+				for (var j = 0; j < groundSize; j++) {
+					tr += `<td x="${j}" y="${i}" onclick="play(this)"></td>`
+				}
+				tr+=`</tr>`;
+			}
+			$('#playground').empty();
+			$('#playground').append(tr);
+		}
+
+		function play(el){
+			if($(el).text() == ""){
+				$(el).text(turn);
+				var color = turn == "X" ? "red" : "green";
+				$(el).css('color', color);
+
+				var startX = 0;
+				var startY = Number($(el).attr('y'))- Number($(el).attr('x'));
+				
+				while(startY <= groundSize){
+					$(`[x=${startX}][y=${startY}]`).css('background', 'grey');
+					startY++;
+					startX++;
+				}
+
+
+
+
+
+
+
+				turn = turn == "X" ? "O" : "X";
+			}
+		}
+	</script>
+</body>
+</html>
