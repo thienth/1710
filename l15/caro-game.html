@@ -84,16 +84,56 @@
 					}
 				}
 
-				// var startX = 0;
-				// var startY = Number($(el).attr('y'))- Number($(el).attr('x'));
+
+				// check hang doc
+				var listTd = $(`[x=${currentX}]`);
+				var count = 0;
+				for (var i = 0; i < listTd.length; i++) {
+
+					if(count >= 5){
+						break;
+					}
+					if($(listTd[i]).text() == turn){
+						count++;
+					}else {
+						count = 0;
+					}
+				}
+
+				if(count>=5){
+					var rs = confirm(`Chúc mừng team ${turn} đã chiến thắng. Bạn có muốn tiếp tục không ?`);
+					if(rs){
+						startGame();
+					}else{
+						window.close();
+					}
+				}
+
+				// check hang cheo tu trai sang phai
+				var startX = 0;
+				var startY = Number($(el).attr('y'))- Number($(el).attr('x'));
 				
-				// while(startY <= groundSize){
-				// 	$(`[x=${startX}][y=${startY}]`).css('background', 'grey');
-				// 	startY++;
-				// 	startX++;
-				// }
+				while(startY <= groundSize){
+					if(count>=5) break;
+					if($(`[x=${startX}][y=${startY}]`).text() == turn){
+						count++;
+					}else{
+						count=0;
+					}
 
+					startY++;
+					startX++;
+				}
+				if(count>=5){
+					var rs = confirm(`Chúc mừng team ${turn} đã chiến thắng. Bạn có muốn tiếp tục không ?`);
+					if(rs){
+						startGame();
+					}else{
+						window.close();
+					}
+				}
 
+				// check theo duong cheo tu phai sang trai
 
 
 
