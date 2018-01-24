@@ -4,6 +4,7 @@ require_once 'lib.php';
 
 
 $listStudent = getStudents();
+// var_dump($listStudent);die;
  ?>
 
  <!DOCTYPE html>
