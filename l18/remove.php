@@ -11,7 +11,7 @@ foreach ($students as $i => $st) {
 	}
 }
 
+overwriteStudents($students);
 
-
-header('location: readText.php');
+header('location: index.php');
  ?>
