@@ -7,8 +7,10 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<form action="create_submit.php" method="post" >
+	<form action="create_submit.php" method="post" enctype="multipart/form-data">
 		Name: <input type="text" name="username" value="" placeholder="">
+		<br>
+		Avatar: <input type="file" name="avatar" value="" placeholder="">
 		<br>
 		Age: <input type="number" name="age" min="1" value="" placeholder="">
 		<br>

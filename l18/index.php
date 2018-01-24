@@ -22,6 +22,7 @@ $listStudent = getStudents();
  			<tr>
  				<th>ID</th>
  				<th>Name</th>
+ 				<th>Avatar</th>
  				<th>Age</th>
  				<th>School</th>
  				<th>
@@ -32,10 +33,13 @@ $listStudent = getStudents();
  		<tbody>
  			<?php foreach ($listStudent as $st): ?>
 				<tr>
-	 				<td><?php echo $st[0] ?></td>
+	 				<td><?php echo $st[0] ?></td> 
 	 				<td><?php echo $st[1] ?></td>
-	 				<td><?php echo $st[2] ?></td>
+	 				<td>
+	 					<img src="<?php echo $st[2] ?>" width="100" alt="">
+	 				</td>
 	 				<td><?php echo $st[3] ?></td>
+	 				<td><?php echo $st[4] ?></td>
 	 				<td>
 	 					<a href="update.php?id=<?php echo $st[0] ?>" title="">Update</a>
 	 					<a href="remove.php?id=<?php echo $st[0] ?>" title="">Remove</a>

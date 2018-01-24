@@ -17,7 +17,7 @@ function getStudents()
 function overwriteStudents($students){
 	$content = "";
 	foreach ($students as $st) {
-		$content .= $st[0]."|".$st[1]."|".$st[2]."|".$st[3]."|end";
+		$content .= $st[0]."|".$st[1]."|".$st[2]."|".$st[3]."|".$st[4]."|end";
 	}
 
 

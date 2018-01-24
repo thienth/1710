@@ -26,6 +26,7 @@ if(!$currentStudent){
 	<link rel="stylesheet" href="">
 </head>
 <body>
+	
 	<form action="update_submit.php" method="post" >
 		<input type="hidden" name="userId" value="<?php echo $currentStudent[0] ?>">
 		Name: <input type="text" name="username" value="<?php echo $currentStudent[1] ?>" placeholder="">
