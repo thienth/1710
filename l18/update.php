@@ -27,13 +27,20 @@ if(!$currentStudent){
 </head>
 <body>
 	
-	<form action="update_submit.php" method="post" >
+	<form action="update_submit.php" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="userId" value="<?php echo $currentStudent[0] ?>">
 		Name: <input type="text" name="username" value="<?php echo $currentStudent[1] ?>" placeholder="">
 		<br>
-		Age: <input type="number" name="age" min="1" value="<?php echo $currentStudent[2] ?>" placeholder="">
+		<?php if ($currentStudent[2] != ""): ?>
+			<img src="<?php echo $currentStudent[2] ?>" width="100">
+			<br>
+		<?php endif ?>
+
+		Imge: <input type="file" name="avatar">
 		<br>
-		School: <input type="text" name="school" value="<?php echo $currentStudent[3] ?>" placeholder="">
+		Age: <input type="number" name="age" min="1" value="<?php echo $currentStudent[3] ?>" placeholder="">
+		<br>
+		School: <input type="text" name="school" value="<?php echo $currentStudent[4] ?>" placeholder="">
 		<br>
 		<button type="submit">Update</button>
 	</form>
