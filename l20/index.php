@@ -51,6 +51,9 @@ $result = $stmt->fetchAll();
 				else if($st['gender'] == 3 ) echo "Khác";
 				else echo "Không xác định"; ?></td>
 				<td><?php echo $st['school'] ?></td>
+				<td>
+					<a href="update.php?id=<?php echo $st['id'] ?>" title="">Update</a>
+				</td>
 			</tr>
 			<?php endforeach ?>
 		</tbody>
