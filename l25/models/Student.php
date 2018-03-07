@@ -17,8 +17,17 @@ class Student{
 	}
 
 	function where($col, $compare, $value){
-		$sql = "select * from " . self::TABLE_NAME . " where $col $compare '$value'";
-		$stmt = $this->conn->prepare($sql);
+		$this->queryBuilder = "select * from " . self::TABLE_NAME . " where $col $compare '$value'";
+		return $this;
+	}
+
+	function andWhere($col, $compare, $value){
+		$this->queryBuilder .= " and $col $compare '$value'";
+		return $this;
+	}
+
+	function get(){
+		$stmt = $this->conn->prepare($this->queryBuilder);
 		$stmt->execute();
 		$result = $stmt->fetchAll();
 		return $result;
