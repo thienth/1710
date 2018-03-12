@@ -1,10 +1,12 @@
 <?php 
 require_once 'models/Student.php';
-$listStudent = Student::all();
+// $listStudent = Student::where(['id', '>', 3])
+// 				->orWhere(['id', '=', 1])
+// 				->get();
 
-
+$student = Student::find(1);
+var_dump($student->delete());
+var_dump(Student::all());
  ?>
 
- <?php foreach ($listStudent as $st): ?>
- 	<h2><?= $st->name?> - <?= $st->convertDate()?></h2>
- <?php endforeach ?>
+ 
