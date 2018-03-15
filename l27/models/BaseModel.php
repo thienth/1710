@@ -24,6 +24,7 @@ class BaseModel{
 		}
 		$sql = rtrim($sql, ", ");
 		$sql .= ")";
+		var_dump($sql);die;
 		$stmt = $this->conn->prepare($sql);
 		$stmt->execute();
 		return true;
