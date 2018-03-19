@@ -5,7 +5,10 @@ class HomeController{
 
 	function index(){
 		$students = Student::all();
-		var_dump($students);
+		$title = 'Trang chủ';
+
+		$view = 'app/views/homepage.php';
+		include_once 'app/views/layouts/main.php';
 	}
 
 }
