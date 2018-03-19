@@ -11,7 +11,7 @@
 		<tr>
 			<td><?= $st->id?></td>
 			<td>
-				<a href="detail-student.php?id=<?=$st->id?>" title="">
+				<a href="detail-student.php?id=<?= $st->id ?>" title="">
 					<?= $st->name?>
 				</a>
 			</td>
