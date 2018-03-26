@@ -1,0 +1,9 @@
+{
+    "name": "gin/l29",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
