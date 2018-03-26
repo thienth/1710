@@ -1,0 +1,12 @@
+{
+    "name": "gin/l29",
+    "require": {
+    	"phpmailer/phpmailer": "^6.0",
+    	"phroute/phroute": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
