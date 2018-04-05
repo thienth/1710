@@ -12,6 +12,14 @@ class CustomRoute
 
 		$router->get('login', ['App\Controllers\AuthenticateController', 'index']);
 
+		$router->post('login', ['App\Controllers\AuthenticateController', 'postLogin']);
+
+		$router->any('logout', function(){
+			unset($_SESSION[AUTH_SESSION]);
+			header('location: index.php');
+			die;
+		});
+
 		$router->get('/', 
 			['App\Controllers\HomeController', 'index']);
 

@@ -1,1 +1,6 @@
-<h2>Day la trang chi tiet bai viet</h2>
+<?php 
+session_start();
+echo $_SESSION['user'];
+
+
+ ?>

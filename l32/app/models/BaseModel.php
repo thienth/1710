@@ -74,6 +74,14 @@ class BaseModel{
 		return true;
 	}
 
+	function first(){
+		$list = $this->get();
+		if(count($list) > 0){
+			return $list[0];
+		}
+		return null;
+	}
+
 	function get(){
 		$stmt = $this->conn->prepare($this->queryBuilder);
 		$stmt->execute();

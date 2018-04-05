@@ -1,23 +1,17 @@
-<table>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>name</th>
-			<th>address</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php foreach ($students as $st): ?>
-		<tr>
-			<td><?= $st->id?></td>
-			<td>
-				<a href="detail?id=<?= $st->id ?>" title="">
-					<?= $st->name?>
-				</a>
-			</td>
-			<td><?= $st->address?></td>
-		</tr>
-			
-		<?php endforeach ?>
-	</tbody>
-</table>
+
+<?php 
+if(isset($_SESSION[AUTH_SESSION]) 
+	&& count($_SESSION[AUTH_SESSION]) > 0){
+		?>
+	<h3>Hello, <?= $_SESSION[AUTH_SESSION]['name'] ?></h3>
+	<a href="logout" title="">Logout</a>
+	
+	<?php
+}else{
+	?>
+
+	<a href="login" title="">Mời bạn đăng nhập!</a>
+	
+	<?php
+}
+ ?>

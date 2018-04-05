@@ -6,6 +6,7 @@
 	<form action="" method="post" class="col-md-4 col-md-offset-4">
 		<div class="text-center">
 			<h3 class="text-info">Login page</h3>
+			<p class="text-danger"><?= $errMsg?></p>
 		</div>
 		<div class="form-group">
 			<label for="">Email</label>

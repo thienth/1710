@@ -1,6 +1,12 @@
 <?php 
+session_start();
+$_SESSION['user'] = 'duong van giang';
 
-echo password_hash('thienth1234', PASSWORD_DEFAULT);
+
+echo $_SESSION['user'];
+
+
+// echo password_hash('thienth1234', PASSWORD_DEFAULT);
  ?>
 
 
